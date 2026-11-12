@@ -1,0 +1,14 @@
+[package]
+name = "acs150-simulator"
+version = "0.1.0"
+edition = "2021"
+description = "Educational ABB ACS150 drive simulator"
+
+[dependencies]
+eframe = { version = "0.27.2", default-features = false, features = ["default_fonts", "glow"] }
+
+[profile.release]
+opt-level = 2
+lto = true
+codegen-units = 1
+strip = true
